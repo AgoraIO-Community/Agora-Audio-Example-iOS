@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBA3CB259BB2BDC6AE707C18 /* libPods-Agora-Audio-Example-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 593C6A9CFDC50F5BB2610A28 /* libPods-Agora-Audio-Example-iOS.a */; };
+		F35E2CD425A8639A00210393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CD325A8639A00210393 /* AppDelegate.swift */; };
+		F35E2CD625A8639A00210393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CD525A8639A00210393 /* SceneDelegate.swift */; };
+		F35E2CD825A8639A00210393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CD725A8639A00210393 /* ViewController.swift */; };
+		F35E2CDD25A8639C00210393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35E2CDC25A8639C00210393 /* Assets.xcassets */; };
+		F35E2CE025A8639C00210393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35E2CDE25A8639C00210393 /* LaunchScreen.storyboard */; };
+		F35E2CEF25A86F2100210393 /* AgoraAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CEE25A86F2100210393 /* AgoraAudioViewController.swift */; };
+		F35E2CF225AC60F000210393 /* AgoraAudioViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CF125AC60F000210393 /* AgoraAudioViewController+TableView.swift */; };
+		F371DA3525ADCCB7004A8416 /* AgoraAudioViewController+AgoraDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371DA3425ADCCB7004A8416 /* AgoraAudioViewController+AgoraDelegates.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		112C1E6551D8A701066B815B /* Pods-Agora-Audio-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agora-Audio-Example-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		593C6A9CFDC50F5BB2610A28 /* libPods-Agora-Audio-Example-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agora-Audio-Example-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5D16190B0B4A97A2CA326B /* Pods-Agora-Audio-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agora-Audio-Example-iOS.release.xcconfig"; path = "Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F35E2CD025A8639A00210393 /* Agora-Audio-Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agora-Audio-Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35E2CD325A8639A00210393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F35E2CD525A8639A00210393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F35E2CD725A8639A00210393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F35E2CDC25A8639C00210393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F35E2CDF25A8639C00210393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F35E2CE125A8639C00210393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F35E2CEE25A86F2100210393 /* AgoraAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraAudioViewController.swift; sourceTree = "<group>"; };
+		F35E2CF125AC60F000210393 /* AgoraAudioViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgoraAudioViewController+TableView.swift"; sourceTree = "<group>"; };
+		F371DA3425ADCCB7004A8416 /* AgoraAudioViewController+AgoraDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgoraAudioViewController+AgoraDelegates.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F35E2CCD25A8639A00210393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA3CB259BB2BDC6AE707C18 /* libPods-Agora-Audio-Example-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23994853D4C3D15DAD8CFAFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				112C1E6551D8A701066B815B /* Pods-Agora-Audio-Example-iOS.debug.xcconfig */,
+				BF5D16190B0B4A97A2CA326B /* Pods-Agora-Audio-Example-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		688050DEDCDD1DF6BD9C7664 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				593C6A9CFDC50F5BB2610A28 /* libPods-Agora-Audio-Example-iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F35E2CC725A8639A00210393 = {
+			isa = PBXGroup;
+			children = (
+				F35E2CD225A8639A00210393 /* Agora-Audio-Example-iOS */,
+				F35E2CD125A8639A00210393 /* Products */,
+				23994853D4C3D15DAD8CFAFC /* Pods */,
+				688050DEDCDD1DF6BD9C7664 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F35E2CD125A8639A00210393 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F35E2CD025A8639A00210393 /* Agora-Audio-Example-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F35E2CD225A8639A00210393 /* Agora-Audio-Example-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F35E2CD325A8639A00210393 /* AppDelegate.swift */,
+				F35E2CD525A8639A00210393 /* SceneDelegate.swift */,
+				F35E2CD725A8639A00210393 /* ViewController.swift */,
+				F35E2CEE25A86F2100210393 /* AgoraAudioViewController.swift */,
+				F371DA3425ADCCB7004A8416 /* AgoraAudioViewController+AgoraDelegates.swift */,
+				F35E2CF125AC60F000210393 /* AgoraAudioViewController+TableView.swift */,
+				F35E2CDC25A8639C00210393 /* Assets.xcassets */,
+				F35E2CDE25A8639C00210393 /* LaunchScreen.storyboard */,
+				F35E2CE125A8639C00210393 /* Info.plist */,
+			);
+			path = "Agora-Audio-Example-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F35E2CCF25A8639A00210393 /* Agora-Audio-Example-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F35E2CE425A8639C00210393 /* Build configuration list for PBXNativeTarget "Agora-Audio-Example-iOS" */;
+			buildPhases = (
+				DD0BC908AF61841FF26B9795 /* [CP] Check Pods Manifest.lock */,
+				F35E2CCC25A8639A00210393 /* Sources */,
+				F35E2CCD25A8639A00210393 /* Frameworks */,
+				F35E2CCE25A8639A00210393 /* Resources */,
+				1A76F971254138C01B7554E7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Agora-Audio-Example-iOS";
+			productName = "Agora-Audio-Example-iOS";
+			productReference = F35E2CD025A8639A00210393 /* Agora-Audio-Example-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F35E2CC825A8639A00210393 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F35E2CCF25A8639A00210393 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = F35E2CCB25A8639A00210393 /* Build configuration list for PBXProject "Agora-Audio-Example-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F35E2CC725A8639A00210393;
+			productRefGroup = F35E2CD125A8639A00210393 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F35E2CCF25A8639A00210393 /* Agora-Audio-Example-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F35E2CCE25A8639A00210393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35E2CE025A8639C00210393 /* LaunchScreen.storyboard in Resources */,
+				F35E2CDD25A8639C00210393 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A76F971254138C01B7554E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD0BC908AF61841FF26B9795 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Agora-Audio-Example-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F35E2CCC25A8639A00210393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35E2CEF25A86F2100210393 /* AgoraAudioViewController.swift in Sources */,
+				F35E2CF225AC60F000210393 /* AgoraAudioViewController+TableView.swift in Sources */,
+				F371DA3525ADCCB7004A8416 /* AgoraAudioViewController+AgoraDelegates.swift in Sources */,
+				F35E2CD825A8639A00210393 /* ViewController.swift in Sources */,
+				F35E2CD425A8639A00210393 /* AppDelegate.swift in Sources */,
+				F35E2CD625A8639A00210393 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F35E2CDE25A8639C00210393 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F35E2CDF25A8639C00210393 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F35E2CE225A8639C00210393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F35E2CE325A8639C00210393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F35E2CE525A8639C00210393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112C1E6551D8A701066B815B /* Pods-Agora-Audio-Example-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Agora-Audio-Example-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F35E2CE625A8639C00210393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF5D16190B0B4A97A2CA326B /* Pods-Agora-Audio-Example-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Agora-Audio-Example-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F35E2CCB25A8639A00210393 /* Build configuration list for PBXProject "Agora-Audio-Example-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35E2CE225A8639C00210393 /* Debug */,
+				F35E2CE325A8639C00210393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F35E2CE425A8639C00210393 /* Build configuration list for PBXNativeTarget "Agora-Audio-Example-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35E2CE525A8639C00210393 /* Debug */,
+				F35E2CE625A8639C00210393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F35E2CC825A8639A00210393 /* Project object */;
+}
