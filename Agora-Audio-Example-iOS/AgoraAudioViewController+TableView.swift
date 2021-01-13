@@ -40,6 +40,12 @@ extension AgoraAudioViewController: UITableViewDelegate, UITableViewDataSource {
         )[indexPath.row]
 
         cell.textLabel?.text = self.usernameLookups[cellUserID]
+
+        if indexPath.section == 0, cellUserID == self.activeSpeaker {
+            cell.backgroundColor = .systemGreen
+        } else {
+            cell.backgroundColor = .systemBackground
+        }
         return cell
     }
 }

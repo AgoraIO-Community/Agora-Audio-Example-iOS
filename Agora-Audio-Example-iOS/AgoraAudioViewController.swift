@@ -38,6 +38,7 @@ class AgoraAudioViewController: UIViewController {
     var rtmChannel: AgoraRtmChannel?
     var userID: UInt = 0
     var activeSpeakers: Set<UInt> = []
+    var activeSpeaker: UInt?
     var activeAudience: Set<UInt> = []
     var usernameLookups: [UInt: String] = [:]
 

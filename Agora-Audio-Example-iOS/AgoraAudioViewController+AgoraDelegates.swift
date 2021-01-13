@@ -26,14 +26,9 @@ extension AgoraAudioViewController: AgoraRtcEngineDelegate {
         self.speakerTable?.reloadData()
     }
 
-    func rtcEngine(
-        _ engine: AgoraRtcEngineKit,
-        reportAudioVolumeIndicationOfSpeakers speakers: [AgoraRtcAudioVolumeInfo],
-        totalVolume: Int
-    ) {
-        for speaker in speakers {
-            print("\(speaker.uid): \(Float(speaker.volume) / Float(totalVolume))")
-        }
+    func rtcEngine(_ engine: AgoraRtcEngineKit, activeSpeaker speakerUid: UInt) {
+        self.activeSpeaker = speakerUid
+        self.speakerTable?.reloadData()
     }
 }
 
