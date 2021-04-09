@@ -11,28 +11,26 @@ import AgoraRtcKit
 
 struct ContentView: View {
     @State var joinedChannel: Bool = false
-    var rtckit: AgoraRtcEngineKit { self.lvm.rtckit }
-    var rtmkit: AgoraRtmKit? { self.lvm.rtmkit }
-    @ObservedObject var lvm = AgoraObservable()
+    @ObservedObject var agoraObservable = AgoraObservable()
     var body: some View {
         Form {
             Section(header: Text("Channel Information")) {
                 TextField(
-                    "Channel Name", text: $lvm.channelName
+                    "Channel Name", text: $agoraObservable.channelName
                 ).disabled(joinedChannel)
                 TextField(
-                    "Username", text: $lvm.username
+                    "Username", text: $agoraObservable.username
                 ).disabled(joinedChannel)
             }
             Button(action: {
                 joinedChannel.toggle()
                 if !joinedChannel {
-                    self.lvm.members.removeAll()
-                    rtckit.leaveChannel()
-                    rtmkit?.logout()
-                    self.lvm.rtmIsLoggedIn = false
+                    self.agoraObservable.members.removeAll()
+                    self.agoraObservable.rtckit.leaveChannel()
+                    self.agoraObservable.rtmkit?.logout()
+                    self.agoraObservable.rtmIsLoggedIn = false
                 } else {
-                    self.lvm.joinChannel()
+                    self.agoraObservable.joinChannel()
                 }
             }, label: {
                 Text("\(joinedChannel ? "Leave" : "Join") Channel")
@@ -40,9 +38,7 @@ struct ContentView: View {
             })
             if joinedChannel {
                 Section(header: Text("Members")) {
-                    List(lvm.members, id: \.self) { string in
-                        Text(string)
-                    }
+                    List(agoraObservable.members, id: \.self) { Text($0) }
                 }
             }
         }
@@ -53,6 +49,10 @@ struct UserData: Codable {
     var rtmId: String
     var rtcId: UInt
     var username: String
+    func toJSONString() throws -> String? {
+        let jsonData = try JSONEncoder().encode(self)
+        return String(data: jsonData, encoding: .utf8)
+    }
 }
 
 class AgoraObservable: NSObject, ObservableObject {
@@ -61,8 +61,11 @@ class AgoraObservable: NSObject, ObservableObject {
     @Published var members: [String] = []
     @Published var membersLookup: [String: (rtcId: UInt, username: String)] = [:] {
         didSet {
-            print("did set then")
-            members = self.membersLookup.values.compactMap { $0.username + ($0.username == username ? " (Me)" : "") }
+            members = self.membersLookup.values.compactMap {
+                $0.username + (
+                    $0.rtcId == self.rtcId ? " (Me)" : ""
+                )
+            }
         }
     }
 
@@ -76,6 +79,7 @@ class AgoraObservable: NSObject, ObservableObject {
             withAppId: <#Agora App ID#>, delegate: nil
         )
         engine.setChannelProfile(.liveBroadcasting)
+        engine.setClientRole(.broadcaster)
         return engine
     }()
 
@@ -85,7 +89,8 @@ class AgoraObservable: NSObject, ObservableObject {
         )
         return rtm
     }()
-
+}
+extension AgoraObservable {
     func joinChannel() {
         if !self.rtmIsLoggedIn {
             rtmkit?.login(byToken: nil, user: self.rtmId) { rtmLoggedIn in
@@ -100,8 +105,7 @@ class AgoraObservable: NSObject, ObservableObject {
             self.channel?.join(completion: { joinStatus in
                 if joinStatus == .channelErrorOk {
                     let user = UserData(rtmId: self.rtmId, rtcId: self.rtcId, username: self.username)
-                    guard let jsonData = try? JSONEncoder().encode(user),
-                          let jsonString = String(data: jsonData, encoding: .utf8) else {
+                    guard let jsonString = try? user.toJSONString() else {
                         return
                     }
                     self.membersLookup[user.rtmId] = (user.rtcId, user.username)
@@ -114,8 +118,7 @@ class AgoraObservable: NSObject, ObservableObject {
     }
     func sendUsername(to member: AgoraRtmMember) {
         let user = UserData(rtmId: self.rtmId, rtcId: self.rtcId, username: self.username)
-        guard let jsonData = try? JSONEncoder().encode(user),
-              let jsonString = String(data: jsonData, encoding: .utf8) else {
+        guard let jsonString = try? user.toJSONString() else {
             return
         }
         self.rtmkit?.send(AgoraRtmMessage(text: jsonString), toPeer: member.userId)
@@ -149,6 +152,6 @@ extension AgoraObservable: AgoraRtmChannelDelegate, AgoraRtmDelegate {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().preferredColorScheme(.dark)
     }
 }
