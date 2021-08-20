@@ -93,13 +93,19 @@ class AgoraObservable: NSObject, ObservableObject {
 extension AgoraObservable {
     func joinChannel() {
         if !self.rtmIsLoggedIn {
-            rtmkit?.login(byToken: nil, user: self.rtmId) { rtmLoggedIn in
+            rtmkit?.login(byToken: nil, user: self.rtmId) { loginResponse in
+                if loginResponse != .ok {
+                    fatalError("Could not log in to RTM")
+                }
                 self.rtmIsLoggedIn = true
                 self.joinChannel()
             }
             return
         }
-        self.rtckit.joinChannel(byToken: nil, channelId: self.channelName, info: nil, uid: self.rtcId) { (channel, uid, errCode) in
+        self.rtckit.joinChannel(
+            byToken: nil, channelId: self.channelName,
+            info: nil, uid: self.rtcId
+        ) { (channel, uid, _) in
             self.rtcId = uid
             self.channel = self.rtmkit?.createChannel(withId: self.channelName, delegate: self)
             self.channel?.join(completion: { joinStatus in

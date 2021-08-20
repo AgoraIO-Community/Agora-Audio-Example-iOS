@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BBA3CB259BB2BDC6AE707C18 /* libPods-Agora-Audio-Example-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 593C6A9CFDC50F5BB2610A28 /* libPods-Agora-Audio-Example-iOS.a */; };
+		F353FEC526D00C1D00EDAA9C /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = F353FEC426D00C1D00EDAA9C /* AgoraRtmKit */; };
+		F353FEC826D00C7E00EDAA9C /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = F353FEC726D00C7E00EDAA9C /* AgoraRtcKit */; };
 		F35E2CD425A8639A00210393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CD325A8639A00210393 /* AppDelegate.swift */; };
 		F35E2CD625A8639A00210393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CD525A8639A00210393 /* SceneDelegate.swift */; };
 		F35E2CD825A8639A00210393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2CD725A8639A00210393 /* ViewController.swift */; };
@@ -19,9 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		112C1E6551D8A701066B815B /* Pods-Agora-Audio-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agora-Audio-Example-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		593C6A9CFDC50F5BB2610A28 /* libPods-Agora-Audio-Example-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agora-Audio-Example-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF5D16190B0B4A97A2CA326B /* Pods-Agora-Audio-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agora-Audio-Example-iOS.release.xcconfig"; path = "Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F35E2CD025A8639A00210393 /* Agora-Audio-Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agora-Audio-Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35E2CD325A8639A00210393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F35E2CD525A8639A00210393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,37 +37,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA3CB259BB2BDC6AE707C18 /* libPods-Agora-Audio-Example-iOS.a in Frameworks */,
+				F353FEC826D00C7E00EDAA9C /* AgoraRtcKit in Frameworks */,
+				F353FEC526D00C1D00EDAA9C /* AgoraRtmKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23994853D4C3D15DAD8CFAFC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				112C1E6551D8A701066B815B /* Pods-Agora-Audio-Example-iOS.debug.xcconfig */,
-				BF5D16190B0B4A97A2CA326B /* Pods-Agora-Audio-Example-iOS.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		688050DEDCDD1DF6BD9C7664 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				593C6A9CFDC50F5BB2610A28 /* libPods-Agora-Audio-Example-iOS.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F35E2CC725A8639A00210393 = {
 			isa = PBXGroup;
 			children = (
 				F35E2CD225A8639A00210393 /* Agora-Audio-Example-iOS */,
 				F35E2CD125A8639A00210393 /* Products */,
-				23994853D4C3D15DAD8CFAFC /* Pods */,
-				688050DEDCDD1DF6BD9C7664 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +84,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F35E2CE425A8639C00210393 /* Build configuration list for PBXNativeTarget "Agora-Audio-Example-iOS" */;
 			buildPhases = (
-				DD0BC908AF61841FF26B9795 /* [CP] Check Pods Manifest.lock */,
 				F35E2CCC25A8639A00210393 /* Sources */,
 				F35E2CCD25A8639A00210393 /* Frameworks */,
 				F35E2CCE25A8639A00210393 /* Resources */,
-				1A76F971254138C01B7554E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Agora-Audio-Example-iOS";
+			packageProductDependencies = (
+				F353FEC426D00C1D00EDAA9C /* AgoraRtmKit */,
+				F353FEC726D00C7E00EDAA9C /* AgoraRtcKit */,
+			);
 			productName = "Agora-Audio-Example-iOS";
 			productReference = F35E2CD025A8639A00210393 /* Agora-Audio-Example-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +124,10 @@
 				Base,
 			);
 			mainGroup = F35E2CC725A8639A00210393;
+			packageReferences = (
+				F353FEC326D00C1D00EDAA9C /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */,
+				F353FEC626D00C7E00EDAA9C /* XCRemoteSwiftPackageReference "AgoraAudio_iOS" */,
+			);
 			productRefGroup = F35E2CD125A8639A00210393 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,48 +148,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1A76F971254138C01B7554E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Agora-Audio-Example-iOS/Pods-Agora-Audio-Example-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD0BC908AF61841FF26B9795 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Agora-Audio-Example-iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F35E2CCC25A8639A00210393 /* Sources */ = {
@@ -351,7 +295,6 @@
 		};
 		F35E2CE525A8639C00210393 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 112C1E6551D8A701066B815B /* Pods-Agora-Audio-Example-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -371,7 +314,6 @@
 		};
 		F35E2CE625A8639C00210393 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF5D16190B0B4A97A2CA326B /* Pods-Agora-Audio-Example-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -411,6 +353,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F353FEC326D00C1D00EDAA9C /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AgoraIO/AgoraRTM_iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.8;
+			};
+		};
+		F353FEC626D00C7E00EDAA9C /* XCRemoteSwiftPackageReference "AgoraAudio_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AgoraIO/AgoraAudio_iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = "3.5.0-hotfix.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F353FEC426D00C1D00EDAA9C /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F353FEC326D00C1D00EDAA9C /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */;
+			productName = AgoraRtmKit;
+		};
+		F353FEC726D00C7E00EDAA9C /* AgoraRtcKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F353FEC626D00C7E00EDAA9C /* XCRemoteSwiftPackageReference "AgoraAudio_iOS" */;
+			productName = AgoraRtcKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F35E2CC825A8639A00210393 /* Project object */;
 }

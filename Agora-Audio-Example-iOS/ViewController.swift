@@ -29,11 +29,15 @@ class ViewController: UIViewController {
     @objc func joinChannel() {
         let channel = self.channelField.text ?? ""
         let username = self.usernameField.text ?? ""
-        let role: AgoraClientRole = self.toggleRole.selectedSegmentIndex == 0 ? .audience : .broadcaster
+        let role: AgoraClientRole = self.toggleRole.selectedSegmentIndex == 0 ?
+            .audience : .broadcaster
         if channel.isEmpty || username.isEmpty {
             return
         }
-        let agoraAVC = AgoraAudioViewController(appId: ViewController.appID, token: nil, channel: channel, username: username, role: role)
+        let agoraAVC = AgoraAudioViewController(
+            appId: ViewController.appID, token: nil,
+            channel: channel, username: username, role: role
+        )
         agoraAVC.presentationController?.delegate = self
         self.present(agoraAVC, animated: true)
     }
@@ -41,17 +45,17 @@ class ViewController: UIViewController {
     // MARK: - UI Elements
 
     lazy var channelField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "channel-name"
-        tf.borderStyle = .roundedRect
-        return tf
+        let textf = UITextField()
+        textf.placeholder = "channel-name"
+        textf.borderStyle = .roundedRect
+        return textf
     }()
     lazy var usernameField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "username"
-        tf.borderStyle = .roundedRect
-        tf.textContentType = .username
-        return tf
+        let textf = UITextField()
+        textf.placeholder = "username"
+        textf.borderStyle = .roundedRect
+        textf.textContentType = .username
+        return textf
     }()
     let segmentItems = ["audience", "broadcaster"]
     lazy var toggleRole: UISegmentedControl = {
@@ -82,7 +86,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
-        guard let videoViewer = (presentationController.presentedViewController as? AgoraAudioViewController) else {
+        guard let videoViewer = (
+                presentationController.presentedViewController as? AgoraAudioViewController
+        ) else {
             return
         }
         videoViewer.disconnect()
