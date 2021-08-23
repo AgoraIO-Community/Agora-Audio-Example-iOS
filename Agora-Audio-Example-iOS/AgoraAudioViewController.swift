@@ -61,7 +61,7 @@ class AgoraAudioViewController: UIViewController {
         agkit?.joinChannel(
             byToken: self.token, channelId: self.channel,
             info: nil, uid: self.userID,
-            joinSuccess: { (_, uid, elapsed) in
+            joinSuccess: { (_, uid, _) in
                 self.userID = uid
                 if self.role == .audience {
                     self.activeAudience.insert(uid)

@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B19FB67478753BB5C198DC6 /* Pods_SwiftUI_Audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5B0ECAFCE3BBE8D2C7E377 /* Pods_SwiftUI_Audio.framework */; };
+		F3245BFB26B2F8C0005B8E99 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3245BFA26B2F8C0005B8E99 /* AgoraRtmKit */; };
+		F3245BFE26B2F8EE005B8E99 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3245BFD26B2F8EE005B8E99 /* AgoraRtcKit */; };
 		F33E0760260C9D0200EB60D2 /* SwiftUI_AudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E075F260C9D0200EB60D2 /* SwiftUI_AudioApp.swift */; };
 		F33E0762260C9D0200EB60D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E0761260C9D0200EB60D2 /* ContentView.swift */; };
 		F33E0764260C9D0600EB60D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33E0763260C9D0600EB60D2 /* Assets.xcassets */; };
@@ -15,9 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E5B0ECAFCE3BBE8D2C7E377 /* Pods_SwiftUI_Audio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Audio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		682CE5A65DDB6E364176F822 /* Pods-SwiftUI-Audio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Audio.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Audio/Pods-SwiftUI-Audio.release.xcconfig"; sourceTree = "<group>"; };
-		ECF14C86087E46C18A7C9EE4 /* Pods-SwiftUI-Audio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Audio.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Audio/Pods-SwiftUI-Audio.debug.xcconfig"; sourceTree = "<group>"; };
 		F33E075C260C9D0200EB60D2 /* SwiftUI-Audio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Audio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33E075F260C9D0200EB60D2 /* SwiftUI_AudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AudioApp.swift; sourceTree = "<group>"; };
 		F33E0761260C9D0200EB60D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,37 +29,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B19FB67478753BB5C198DC6 /* Pods_SwiftUI_Audio.framework in Frameworks */,
+				F3245BFE26B2F8EE005B8E99 /* AgoraRtcKit in Frameworks */,
+				F3245BFB26B2F8C0005B8E99 /* AgoraRtmKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EBF40ECC13B32F0FAAA9EEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4E5B0ECAFCE3BBE8D2C7E377 /* Pods_SwiftUI_Audio.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D96871E2913110A6EC6F13B0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ECF14C86087E46C18A7C9EE4 /* Pods-SwiftUI-Audio.debug.xcconfig */,
-				682CE5A65DDB6E364176F822 /* Pods-SwiftUI-Audio.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		F33E0753260C9D0200EB60D2 = {
 			isa = PBXGroup;
 			children = (
 				F33E075E260C9D0200EB60D2 /* SwiftUI-Audio */,
 				F33E075D260C9D0200EB60D2 /* Products */,
-				D96871E2913110A6EC6F13B0 /* Pods */,
-				1EBF40ECC13B32F0FAAA9EEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,17 +80,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F33E076B260C9D0600EB60D2 /* Build configuration list for PBXNativeTarget "SwiftUI-Audio" */;
 			buildPhases = (
-				D7E76758709638692A8AA6B2 /* [CP] Check Pods Manifest.lock */,
 				F33E0758260C9D0200EB60D2 /* Sources */,
 				F33E0759260C9D0200EB60D2 /* Frameworks */,
 				F33E075A260C9D0200EB60D2 /* Resources */,
-				3BA25236F6BE9D0284FD135C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "SwiftUI-Audio";
+			packageProductDependencies = (
+				F3245BFA26B2F8C0005B8E99 /* AgoraRtmKit */,
+				F3245BFD26B2F8EE005B8E99 /* AgoraRtcKit */,
+			);
 			productName = "SwiftUI-Audio";
 			productReference = F33E075C260C9D0200EB60D2 /* SwiftUI-Audio.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +120,10 @@
 				Base,
 			);
 			mainGroup = F33E0753260C9D0200EB60D2;
+			packageReferences = (
+				F3245BF926B2F8C0005B8E99 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */,
+				F3245BFC26B2F8EE005B8E99 /* XCRemoteSwiftPackageReference "AgoraAudio_iOS" */,
+			);
 			productRefGroup = F33E075D260C9D0200EB60D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,48 +144,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3BA25236F6BE9D0284FD135C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Audio/Pods-SwiftUI-Audio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Audio/Pods-SwiftUI-Audio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Audio/Pods-SwiftUI-Audio-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7E76758709638692A8AA6B2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftUI-Audio-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F33E0758260C9D0200EB60D2 /* Sources */ = {
@@ -332,7 +276,6 @@
 		};
 		F33E076C260C9D0600EB60D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECF14C86087E46C18A7C9EE4 /* Pods-SwiftUI-Audio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -355,7 +298,6 @@
 		};
 		F33E076D260C9D0600EB60D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 682CE5A65DDB6E364176F822 /* Pods-SwiftUI-Audio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +340,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3245BF926B2F8C0005B8E99 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AgoraIO/AgoraRTM_iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.8;
+			};
+		};
+		F3245BFC26B2F8EE005B8E99 /* XCRemoteSwiftPackageReference "AgoraAudio_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AgoraIO/AgoraAudio_iOS.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3245BFA26B2F8C0005B8E99 /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3245BF926B2F8C0005B8E99 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */;
+			productName = AgoraRtmKit;
+		};
+		F3245BFD26B2F8EE005B8E99 /* AgoraRtcKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3245BFC26B2F8EE005B8E99 /* XCRemoteSwiftPackageReference "AgoraAudio_iOS" */;
+			productName = AgoraRtcKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F33E0754260C9D0200EB60D2 /* Project object */;
 }
